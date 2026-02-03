@@ -1,0 +1,27 @@
+{
+  "navigation": [
+    {
+      "title": "Shop",
+      "url": "/",
+      "items": [
+        {
+          "title": "Alert Dialog",
+          "href": "/#",
+          "description": "A modal dialog that interrupts the user with important content and expects a response."
+        }
+      ]
+    },
+    {
+      "title": "On Sale",
+      "url": "/"
+    },
+    {
+      "title": "New Arrivals",
+      "url": "/"
+    },
+    {
+      "title": "Brands",
+      "url": "/"
+    }
+  ]
+}
