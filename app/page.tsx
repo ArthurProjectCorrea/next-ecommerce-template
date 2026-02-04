@@ -1,64 +1,85 @@
+import { Bungee } from 'next/font/google';
+import { Lato } from 'next/font/google';
+import { Button } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
 import Image from 'next/image';
+
+const bungee = Bungee({ subsets: ['latin'], weight: '400' });
+const lato = Lato({ subsets: ['latin'], weight: '700' });
+
+const statsData = [
+  { number: '200+', label: 'International Brands' },
+  { number: '2,000+', label: 'High-Quality Products' },
+  { number: '30,000+', label: 'Happy Customers' },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{' '}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{' '}
-            or the{' '}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{' '}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div>
+      <main>
+        <section className='flex flex-col md:flex-row bg-cover bg-center bg-no-repeat bg-muted dark:bg-accent md:bg-[url("/home/02.png")]'>
+          <div className="flex flex-col p-10 md:p-20 gap-4 md:gap-8 md:max-w-1/2">
+            <div>
+              <h1 className={`${bungee.className} text-5xl md:text-6xl`}>
+                FIND CLOTHES THAT MATCHES YOUR STYLE
+              </h1>
+            </div>
+            <div className="text-muted-foreground text-lg">
+              <p>
+                Browse through our diverse range of meticulously crafted
+                garments, designed to bring out your individuality and cater to
+                your sense of style.
+              </p>
+            </div>
+            <div>
+              <Button
+                variant="default"
+                size="lg"
+                className="px-10 w-full md:w-auto"
+              >
+                Shop Now
+              </Button>
+            </div>
+            {/* Desktop: flex horizontal | Mobile: grid 2 colunas */}
+            <div className="hidden md:flex items-stretch">
+              {statsData.map((stat, index) => (
+                <div key={index} className="flex items-center">
+                  <div className="flex flex-col gap-1 p-4">
+                    <h1 className={`${lato.className} text-3xl font-bold`}>
+                      {stat.number}
+                    </h1>
+                    <p className="text-muted-foreground">{stat.label}</p>
+                  </div>
+                  {index < statsData.length - 1 && (
+                    <Separator orientation="vertical" />
+                  )}
+                </div>
+              ))}
+            </div>
+            <div className="grid grid-cols-2 gap-8 relative md:hidden">
+              {statsData.map((stat, index) => (
+                <div key={index} className="flex flex-col gap-1 p-4">
+                  <h1 className={`${lato.className} text-3xl font-bold`}>
+                    {stat.number}
+                  </h1>
+                  <p className="text-muted-foreground">{stat.label}</p>
+                </div>
+              ))}
+              <div className="absolute left-1/2 top-0 bottom-1/3 w-px bg-border" />
+            </div>
+          </div>
+          {/* Imagem apenas no mobile */}
+          <div className="md:hidden">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              className="w-full"
+              src="/home/01.png"
+              alt="Hero image"
+              width={500}
+              height={500}
+              priority
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          </div>
+        </section>
       </main>
     </div>
   );
