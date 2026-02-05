@@ -42,7 +42,7 @@ export default function HomeProduct({
       {/* Section Title */}
       <div className="text-center">
         <h2
-          className={`${bungee.className} text-5xl md:text-6xl font-bold tracking-tight`}
+          className={`${bungee.className} text-5xl md:text-4xl font-bold tracking-tight`}
         >
           {section.titulo}
         </h2>

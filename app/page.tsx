@@ -5,7 +5,30 @@ import { Separator } from '@/components/ui/separator';
 import Image from 'next/image';
 import HomeBanner from '@/components/home-banner';
 import HomeProduct from '@/components/home-product';
+import BrowseByStyle from '@/components/browse-by-style';
 import productData from '@/data/product.json';
+
+const browseItems = [
+  {
+    id: 'casual',
+    title: 'Casual',
+    href: '/style/casual',
+    image: '/home/browse/01.png',
+  },
+  {
+    id: 'party',
+    title: 'Party',
+    href: '/style/party',
+    image: '/home/browse/03.png',
+  },
+  {
+    id: 'formal',
+    title: 'Formal',
+    href: '/style/formal',
+    image: '/home/browse/02.png',
+  },
+  { id: 'gym', title: 'Gym', href: '/style/gym', image: '/home/browse/04.png' },
+];
 
 const bungee = Bungee({ subsets: ['latin'], weight: '400' });
 const lato = Lato({ subsets: ['latin'], weight: '700' });
@@ -90,6 +113,9 @@ export default function Home() {
         <Separator className="my-12" />
         <section className="px-4 md:px-8 lg:px-16">
           <HomeProduct section={productData['top-selling']} />
+        </section>
+        <section className="px-4 md:px-8 lg:px-16 my-12">
+          <BrowseByStyle items={browseItems} />
         </section>
       </main>
     </div>
