@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import Image from 'next/image';
 import HomeBanner from '@/components/home-banner';
+import HomeProduct from '@/components/home-product';
+import productData from '@/data/product.json';
 
 const bungee = Bungee({ subsets: ['latin'], weight: '400' });
 const lato = Lato({ subsets: ['latin'], weight: '700' });
@@ -82,6 +84,13 @@ export default function Home() {
           </div>
         </section>
         <HomeBanner />
+        <section className="px-4 md:px-8 lg:px-16">
+          <HomeProduct section={productData['new-arrivals']} />
+        </section>
+        <Separator className="my-12" />
+        <section className="px-4 md:px-8 lg:px-16">
+          <HomeProduct section={productData['top-selling']} />
+        </section>
       </main>
     </div>
   );
