@@ -1,0 +1,32 @@
+{
+  "commits": [
+    {
+      "id": "1",
+      "author": "Sarah M.",
+      "verification": true,
+      "evaluation": 5.0,
+      "commit": "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."
+    },
+    {
+      "id": "2",
+      "author": "David L.",
+      "verification": true,
+      "evaluation": 4.5,
+      "commit": "Shop.co has become my go-to online store for fashion. The variety of styles and the ease of navigation on their website make shopping a breeze. Plus, their customer service is top-notch!"
+    },
+    {
+      "id": "3",
+      "author": "Emily R.",
+      "verification": false,
+      "evaluation": 4.0,
+      "commit": "I love how Shop.co keeps up with the latest trends. Their collection is always fresh and stylish. I've received so many compliments on the outfits I've purchased from them."
+    },
+    {
+      "id": "4",
+      "author": "Michael S.",
+      "verification": true,
+      "evaluation": 5.0,
+      "commit": "The quality of the fabrics and the attention to detail in the designs at Shop.co are impressive. I've recommended this store to all my friends and family."
+    }
+  ]
+}
