@@ -3,6 +3,7 @@ import { Lato } from 'next/font/google';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import Image from 'next/image';
+import HomeBanner from '@/components/home-banner';
 
 const bungee = Bungee({ subsets: ['latin'], weight: '400' });
 const lato = Lato({ subsets: ['latin'], weight: '700' });
@@ -80,6 +81,7 @@ export default function Home() {
             />
           </div>
         </section>
+        <HomeBanner />
       </main>
     </div>
   );
