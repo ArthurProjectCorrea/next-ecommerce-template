@@ -6,6 +6,8 @@ import TopLoader from '@/components/next-top-loader';
 import AppHeader from '@/components/app-header';
 import { SidebarProvider } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/app-sidebar';
+import { Toaster } from '@/components/ui/sonner';
+import AppFooter from '@/components/app-footer';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -46,6 +48,10 @@ export default function RootLayout({
             <TopLoader />
             {children}
           </SidebarProvider>
+          <Toaster />
+          <section>
+            <AppFooter />
+          </section>
         </ThemeProvider>
       </body>
     </html>

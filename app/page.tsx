@@ -7,8 +7,10 @@ import HomeBanner from '@/components/home-banner';
 import HomeProduct from '@/components/home-product';
 import BrowseByStyle from '@/components/browse-by-style';
 import HappyCustomers from '@/components/happy-customers';
+import Newsletter from '@/components/newsletter';
 import productData from '@/data/product.json';
 import commitsData from '@/data/commit.json';
+import AppFooter from '@/components/app-footer';
 
 const browseItems = [
   {
@@ -122,6 +124,10 @@ export default function Home() {
         <Separator className="my-12" />
         <section className="px-4 md:px-8 lg:px-16 my-12">
           <HappyCustomers reviews={commitsData.commits} />
+        </section>
+        <Separator className="my-12" />
+        <section className="px-4 md:px-8 lg:px-16 my-12 -mb-25 ">
+          <Newsletter />
         </section>
       </main>
     </div>
