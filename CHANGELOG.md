@@ -1,3 +1,9 @@
+# [1.1.0](https://github.com/ArthurProjectCorrea/next-ecommerce-template/compare/v1.0.0...v1.1.0) (2026-02-06)
+
+### Features
+
+- **components:** add AppFooter, Newsletter and Toaster integration ([7288afb](https://github.com/ArthurProjectCorrea/next-ecommerce-template/commit/7288afb89c0a5535c77d4b50490e5cace41a38c9))
+
 # 1.0.0 (2026-02-05)
 
 ### Features
