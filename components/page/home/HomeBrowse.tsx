@@ -2,7 +2,7 @@
 
 import { Bungee } from 'next/font/google';
 import Link from 'next/link';
-import lang from '@/lang/en.json';
+import { useDictionary } from '@/context/dict-context';
 
 const bungee = Bungee({ subsets: ['latin'], weight: '400' });
 
@@ -19,6 +19,7 @@ export interface BrowseByStyleData {
 }
 
 export default function HomeBrowse() {
+  const lang = useDictionary();
   const homeBrowse = (lang.homeBrowse?.[0] ?? {
     title: '',
     items: [],

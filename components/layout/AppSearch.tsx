@@ -23,9 +23,10 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Search as SearchIcon } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
-import lang from '@/lang/en.json';
+import { useDictionary } from '@/context/dict-context';
 
 export default function AppSearch() {
+  const lang = useDictionary();
   const isMobile = useIsMobile();
   const [open, setOpen] = React.useState(false);
 
@@ -39,6 +40,7 @@ export default function AppSearch() {
           drawerButtonClose: '',
           drawerButton: '',
           dialogPlaceholder: '',
+          dialogTriggerLabel: '',
           dialogTitle: '',
           dialogDescription: '',
           dialogButtonClose: '',
@@ -90,7 +92,9 @@ export default function AppSearch() {
           className="w-full max-w-md justify-start cursor-pointer text-sm text-muted-foreground"
         >
           <SearchIcon className="size-4 mr-2 opacity-60" />
-          <span>Search for products...</span>
+          <span>
+            {searchData.dialogTriggerLabel ?? searchData.dialogPlaceholder}
+          </span>
         </Button>
       </DialogTrigger>
 

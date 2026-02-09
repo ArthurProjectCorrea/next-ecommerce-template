@@ -123,6 +123,7 @@
       "drawerButtonClose": "Close",
       "drawerButton": "Search",
       "dialogPlaceholder": "Search for products...",
+      "dialogTriggerLabel": "Search for products...",
       "dialogTitle": "Search",
       "dialogDescription": "Type keywords to find products or pages.",
       "dialogButtonClose": "Close"

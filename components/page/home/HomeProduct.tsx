@@ -10,7 +10,7 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel';
 import CardProduct from '@/components/card-product';
-import lang from '@/lang/en.json';
+import { useDictionary } from '@/context/dict-context';
 import productData from '@/database/product.json';
 
 const bungee = Bungee({ subsets: ['latin'], weight: '400' });
@@ -35,6 +35,7 @@ export default function HomeProduct({
 }: {
   onAddToCart?: (productId: number) => void;
 }) {
+  const lang = useDictionary();
   const viewAllButtonText =
     lang.homeProduct && lang.homeProduct.length > 0
       ? lang.homeProduct[0].button

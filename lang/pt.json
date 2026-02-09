@@ -1,0 +1,228 @@
+{
+  "navigation": [
+    {
+      "title": "Loja",
+      "items": [
+        {
+          "title": "Diálogo de Alerta",
+          "href": "#",
+          "description": "Um diálogo modal que interrompe o usuário com conteúdo importante e espera uma resposta."
+        }
+      ]
+    },
+    {
+      "title": "Promoções",
+      "url": "#"
+    },
+    {
+      "title": "Novidades",
+      "url": "#"
+    },
+    {
+      "title": "Marcas",
+      "url": "#"
+    }
+  ],
+  "footer": [
+    {
+      "description": "Temos roupas que combinam com seu estilo e das quais você tem orgulho de usar. De mulheres a homens.",
+      "rightsReserved": "Shop.co © 2000-2023. Todos os direitos reservados.",
+      "sections": [
+        {
+          "title": "EMPRESA",
+          "items": [
+            {
+              "title": "Sobre",
+              "href": "#"
+            },
+            {
+              "title": "Recursos",
+              "href": "#"
+            },
+            {
+              "title": "Trabalhos",
+              "href": "#"
+            },
+            {
+              "title": "Carreiras",
+              "href": "#"
+            }
+          ]
+        },
+        {
+          "title": "AJUDA",
+          "items": [
+            {
+              "title": "Suporte ao Cliente",
+              "href": "#"
+            },
+            {
+              "title": "Termos e Condições",
+              "href": "#"
+            },
+            {
+              "title": "Política de Privacidade",
+              "href": "#"
+            }
+          ]
+        },
+        {
+          "title": "FAQ",
+          "items": [
+            {
+              "title": "Conta",
+              "href": "#"
+            },
+            {
+              "title": "Entregas",
+              "href": "#"
+            },
+            {
+              "title": "Pedidos",
+              "href": "#"
+            },
+            {
+              "title": "Pagamentos",
+              "href": "#"
+            }
+          ]
+        },
+        {
+          "title": "RECURSOS",
+          "items": [
+            {
+              "title": "eBooks Grátis",
+              "href": "#"
+            },
+            {
+              "title": "Tutorial",
+              "href": "#"
+            },
+            {
+              "title": "Blog",
+              "href": "#"
+            },
+            {
+              "title": "Playlist YouTube",
+              "href": "#"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "search": [
+    {
+      "drawerTitle": "Buscar",
+      "drawerDescription": "Digite palavras-chave para encontrar produtos ou páginas.",
+      "drawerPlaceholder": "Buscar produtos...",
+      "drawerButtonClose": "Fechar",
+      "drawerButton": "Buscar",
+      "dialogPlaceholder": "Buscar produtos...",
+      "dialogTriggerLabel": "Buscar produtos...",
+      "dialogTitle": "Buscar",
+      "dialogDescription": "Digite palavras-chave para encontrar produtos ou páginas.",
+      "dialogButtonClose": "Fechar"
+    }
+  ],
+  "account": [
+    {
+      "title": "Conta",
+      "items": [
+        {
+          "title": "Minha Conta",
+          "icon": "User",
+          "href": "#"
+        },
+        {
+          "title": "Configurações",
+          "icon": "Settings",
+          "href": "#"
+        },
+        {
+          "title": "Faturamento",
+          "icon": "CreditCard",
+          "href": "#"
+        },
+        {
+          "title": "Central de Ajuda",
+          "icon": "HelpCircle",
+          "href": "#"
+        },
+        {
+          "title": "Sair",
+          "icon": "LogOut",
+          "href": "#"
+        }
+      ]
+    }
+  ],
+  "homeHero": [
+    {
+      "title": "ENCONTRE ROUPAS QUE COMBINAM COM SEU ESTILO",
+      "description": "Navegue por nossa variedade de peças feitas com cuidado, pensadas para valorizar sua individualidade e seu estilo.",
+      "button": "Comprar Agora",
+      "stats": [
+        {
+          "value": "200+",
+          "label": "Marcas Internacionais"
+        },
+        {
+          "value": "2.000+",
+          "label": "Produtos de Qualidade"
+        },
+        {
+          "value": "30.000+",
+          "label": "Clientes Satisfeitos"
+        }
+      ]
+    }
+  ],
+  "homeProduct": [
+    {
+      "button": "Ver Tudo"
+    }
+  ],
+  "homeBrowse": [
+    {
+      "title": "NAVEGAR POR ESTILO",
+      "items": [
+        {
+          "title": "Casual",
+          "href": "/style/casual",
+          "image": "/home/browse/01.png"
+        },
+        {
+          "title": "Festa",
+          "href": "/style/party",
+          "image": "/home/browse/03.png"
+        },
+        {
+          "title": "Social",
+          "href": "/style/formal",
+          "image": "/home/browse/02.png"
+        },
+        {
+          "title": "Academia",
+          "href": "/style/gym",
+          "image": "/home/browse/04.png"
+        }
+      ]
+    }
+  ],
+  "homeHappy": [
+    {
+      "title": "NOSSOS CLIENTES SATISFEITOS"
+    }
+  ],
+  "homeNewsletter": [
+    {
+      "title": "FIQUE POR DENTRO DAS NOSSAS OFERTAS",
+      "placeholder": "Digite seu e-mail",
+      "button": "Assinar newsletter",
+      "buttonLoading": "Assinando...",
+      "toastInvalidEmail": "Digite um e-mail válido",
+      "toastSuccess": "Inscrito com sucesso!"
+    }
+  ]
+}

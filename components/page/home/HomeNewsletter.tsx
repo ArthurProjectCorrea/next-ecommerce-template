@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Bungee } from 'next/font/google';
 import { Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import lang from '@/lang/en.json';
+import { useDictionary } from '@/context/dict-context';
 import {
   InputGroup,
   InputGroupAddon,
@@ -33,6 +33,7 @@ export default function HomeNewsletter({
   toastSuccess,
   onSubscribe,
 }: NewsletterProps) {
+  const lang = useDictionary();
   const newsletterLang = lang.homeNewsletter?.[0];
   const sectionTitle =
     newsletterLang?.title || title || 'STAY UPDATED ABOUT OUR LATEST OFFERS';

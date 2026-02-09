@@ -1,0 +1,228 @@
+{
+  "navigation": [
+    {
+      "title": "Winkel",
+      "items": [
+        {
+          "title": "Waarschuwingsdialoog",
+          "href": "#",
+          "description": "Een modale dialoog die de gebruiker onderbreekt met belangrijke inhoud."
+        }
+      ]
+    },
+    {
+      "title": "Uitverkoop",
+      "url": "#"
+    },
+    {
+      "title": "Nieuw binnen",
+      "url": "#"
+    },
+    {
+      "title": "Merken",
+      "url": "#"
+    }
+  ],
+  "footer": [
+    {
+      "description": "We hebben kleding die bij je stijl past en waar je trots op bent. Van dames tot heren.",
+      "rightsReserved": "Shop.co © 2000-2023, alle rechten voorbehouden",
+      "sections": [
+        {
+          "title": "BEDRIJF",
+          "items": [
+            {
+              "title": "Over ons",
+              "href": "#"
+            },
+            {
+              "title": "Functies",
+              "href": "#"
+            },
+            {
+              "title": "Werk",
+              "href": "#"
+            },
+            {
+              "title": "Carrière",
+              "href": "#"
+            }
+          ]
+        },
+        {
+          "title": "HELP",
+          "items": [
+            {
+              "title": "Klantenservice",
+              "href": "#"
+            },
+            {
+              "title": "Voorwaarden",
+              "href": "#"
+            },
+            {
+              "title": "Privacybeleid",
+              "href": "#"
+            }
+          ]
+        },
+        {
+          "title": "FAQ",
+          "items": [
+            {
+              "title": "Account",
+              "href": "#"
+            },
+            {
+              "title": "Leveringen",
+              "href": "#"
+            },
+            {
+              "title": "Bestellingen",
+              "href": "#"
+            },
+            {
+              "title": "Betalingen",
+              "href": "#"
+            }
+          ]
+        },
+        {
+          "title": "BRONNEN",
+          "items": [
+            {
+              "title": "Gratis e-boeken",
+              "href": "#"
+            },
+            {
+              "title": "Tutorial",
+              "href": "#"
+            },
+            {
+              "title": "Blog",
+              "href": "#"
+            },
+            {
+              "title": "Youtube",
+              "href": "#"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "search": [
+    {
+      "drawerTitle": "Zoeken",
+      "drawerDescription": "Typ trefwoorden om producten of pagina's te vinden.",
+      "drawerPlaceholder": "Zoek producten...",
+      "drawerButtonClose": "Sluiten",
+      "drawerButton": "Zoeken",
+      "dialogPlaceholder": "Zoek producten...",
+      "dialogTriggerLabel": "Zoek producten...",
+      "dialogTitle": "Zoeken",
+      "dialogDescription": "Typ trefwoorden om producten of pagina's te vinden.",
+      "dialogButtonClose": "Sluiten"
+    }
+  ],
+  "account": [
+    {
+      "title": "Account",
+      "items": [
+        {
+          "title": "Mijn account",
+          "icon": "User",
+          "href": "#"
+        },
+        {
+          "title": "Instellingen",
+          "icon": "Settings",
+          "href": "#"
+        },
+        {
+          "title": "Facturatie",
+          "icon": "CreditCard",
+          "href": "#"
+        },
+        {
+          "title": "Helpcentrum",
+          "icon": "HelpCircle",
+          "href": "#"
+        },
+        {
+          "title": "Uitloggen",
+          "icon": "LogOut",
+          "href": "#"
+        }
+      ]
+    }
+  ],
+  "homeHero": [
+    {
+      "title": "VIND KLEDING DIE BIJ JE STIJL PAST",
+      "description": "Bekijk ons gevarieerde aanbod van kleding, ontworpen om je individualiteit te ondersteunen.",
+      "button": "Shop nu",
+      "stats": [
+        {
+          "value": "200+",
+          "label": "Internationale merken"
+        },
+        {
+          "value": "2.000+",
+          "label": "Producten van hoge kwaliteit"
+        },
+        {
+          "value": "30.000+",
+          "label": "Tevreden klanten"
+        }
+      ]
+    }
+  ],
+  "homeProduct": [
+    {
+      "button": "Bekijk alles"
+    }
+  ],
+  "homeBrowse": [
+    {
+      "title": "BLADEREN OP STIJL",
+      "items": [
+        {
+          "title": "Casual",
+          "href": "/style/casual",
+          "image": "/home/browse/01.png"
+        },
+        {
+          "title": "Feest",
+          "href": "/style/party",
+          "image": "/home/browse/03.png"
+        },
+        {
+          "title": "Formeel",
+          "href": "/style/formal",
+          "image": "/home/browse/02.png"
+        },
+        {
+          "title": "Gym",
+          "href": "/style/gym",
+          "image": "/home/browse/04.png"
+        }
+      ]
+    }
+  ],
+  "homeHappy": [
+    {
+      "title": "ONZE TEVREDEN KLANTEN"
+    }
+  ],
+  "homeNewsletter": [
+    {
+      "title": "BLIJF OP DE HOOGTE VAN ONZE AANBIEDINGEN",
+      "placeholder": "Vul je e-mailadres in",
+      "button": "Abonneren op nieuwsbrief",
+      "buttonLoading": "Bezig met abonneren...",
+      "toastInvalidEmail": "Voer een geldig e-mailadres in",
+      "toastSuccess": "Succesvol geabonneerd!"
+    }
+  ]
+}

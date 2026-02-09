@@ -10,7 +10,7 @@ import {
   DropdownMenuSeparator,
 } from '@/components/ui/dropdown-menu';
 import { User, Settings, CreditCard, HelpCircle, LogOut } from 'lucide-react';
-import lang from '@/lang/en.json';
+import { useDictionary } from '@/context/dict-context';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   User,
@@ -21,6 +21,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 };
 
 export default function AppUser() {
+  const lang = useDictionary();
   const accountData =
     lang.account && lang.account.length > 0
       ? lang.account[0]

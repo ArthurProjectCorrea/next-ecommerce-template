@@ -11,7 +11,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
-import lang from '@/lang/en.json';
+import { useDictionary } from '@/context/dict-context';
 
 interface NavigationSubItem {
   title: string;
@@ -26,6 +26,7 @@ interface NavigationItem {
 }
 
 export function AppNavbar() {
+  const lang = useDictionary();
   const navigationData = (lang.navigation || []) as NavigationItem[];
   return (
     <NavigationMenu>

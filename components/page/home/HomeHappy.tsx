@@ -2,7 +2,7 @@
 
 import { Bungee } from 'next/font/google';
 import { Star, BadgeCheck, BadgeX } from 'lucide-react';
-import lang from '@/lang/en.json';
+import { useDictionary } from '@/context/dict-context';
 import commitData from '@/database/commit.json';
 import {
   Carousel,
@@ -32,6 +32,7 @@ export default function HomeHappy({
   title,
   reviews: reviewsProp,
 }: HappyCustomersProps) {
+  const lang = useDictionary();
   const reviews = reviewsProp ?? commitData.commits;
 
   if (!reviews || reviews.length === 0) return null;

@@ -1,3 +1,5 @@
+'use client';
+
 import * as React from 'react';
 import {
   Sidebar,
@@ -15,9 +17,10 @@ import {
   SidebarTrigger,
 } from '@/components/ui/sidebar';
 import { SidebarOptInForm } from '@/components/sidebar-opt-in-form';
-import lang from '@/lang/en.json';
+import { useDictionary } from '@/context/dict-context';
 
 export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
+  const lang = useDictionary();
   const navigationData = lang.navigation;
 
   return (

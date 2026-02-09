@@ -4,7 +4,7 @@ import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Separator } from '@/components//ui/separator';
-import lang from '@/lang/en.json';
+import { useDictionary } from '@/context/dict-context';
 
 const socialNetworks = [
   { icon: Twitter, href: '#' },
@@ -21,16 +21,17 @@ const paymentMethods = [
   { image: '/home/pay/ourocard.svg', label: 'Ourocard' },
 ];
 
-const footerData =
-  lang.footer && lang.footer.length > 0
-    ? lang.footer[0]
-    : { description: '', rightsReserved: '', sections: [] };
-const sections = (footerData.sections || []).map((s) => ({
-  title: s.title,
-  links: (s.items || []).map((it) => ({ label: it.title, href: it.href })),
-}));
-
 export default function AppFooter() {
+  const lang = useDictionary();
+  const footerData =
+    lang.footer && lang.footer.length > 0
+      ? lang.footer[0]
+      : { description: '', rightsReserved: '', sections: [] };
+  const sections = (footerData.sections || []).map((s) => ({
+    title: s.title,
+    links: (s.items || []).map((it) => ({ label: it.title, href: it.href })),
+  }));
+
   return (
     <footer className="relative z-0 w-full bg-accent pt-40 pb-10 lg:pt-48 lg:pb-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

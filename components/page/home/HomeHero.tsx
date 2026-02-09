@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Bungee, Lato } from 'next/font/google';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import lang from '@/lang/en.json';
+import { useDictionary } from '@/context/dict-context';
 
 const bungee = Bungee({ subsets: ['latin'], weight: '400' });
 const lato = Lato({ subsets: ['latin'], weight: '700' });
@@ -15,6 +15,7 @@ interface HeroStat {
 }
 
 export default function HomeHero() {
+  const lang = useDictionary();
   const heroData =
     lang.homeHero && lang.homeHero.length > 0
       ? lang.homeHero[0]
