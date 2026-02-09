@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/ArthurProjectCorrea/next-ecommerce-template/compare/v1.1.0...v1.2.0) (2026-02-09)
+
+### Features
+
+- **home:** reorganize layout and content data ([4efc69d](https://github.com/ArthurProjectCorrea/next-ecommerce-template/commit/4efc69dafb08836e380c85e7a03d3c9935857639))
+- **i18n:** add locale routing and dictionary context for en, nl, pt ([e3c6917](https://github.com/ArthurProjectCorrea/next-ecommerce-template/commit/e3c691794ffc94807571c0cb684d7803727f6f67))
+
 # [1.1.0](https://github.com/ArthurProjectCorrea/next-ecommerce-template/compare/v1.0.0...v1.1.0) (2026-02-06)
 
 ### Features
