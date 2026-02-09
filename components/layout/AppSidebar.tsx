@@ -1,6 +1,4 @@
 import * as React from 'react';
-import { LogOut } from 'lucide-react';
-
 import {
   Sidebar,
   SidebarContent,
@@ -16,11 +14,12 @@ import {
   SidebarRail,
   SidebarTrigger,
 } from '@/components/ui/sidebar';
-import navigationData from '@/data/navigation.json';
-import { Button } from './ui/button';
-import { SidebarOptInForm } from './sidebar-opt-in-form';
+import { SidebarOptInForm } from '@/components/sidebar-opt-in-form';
+import lang from '@/lang/en.json';
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
+  const navigationData = lang.navigation;
+
   return (
     <Sidebar {...props}>
       <SidebarHeader>
@@ -32,14 +31,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               aria-label="Open sidebar"
               className="p-4"
             />
-            <span className="font-bold">Menu</span>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
           <SidebarMenu>
-            {navigationData.navigation.map((item) => (
+            {navigationData.map((item) => (
               <React.Fragment key={item.title}>
                 {item.items && item.items.length > 0 ? (
                   <SidebarMenuItem>
@@ -76,15 +74,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <div className="p-1">
           <SidebarOptInForm />
         </div>
-        <SidebarContent>
-          <Button
-            variant="default"
-            className="w-full max-w-md justify-center cursor-pointer text-sm"
-          >
-            <LogOut className="mr-2 size-4" />
-            <span>Logout</span>
-          </Button>
-        </SidebarContent>
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>

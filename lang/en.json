@@ -1,0 +1,231 @@
+{
+  "navigation": [
+    {
+      "title": "Shop",
+      "items": [
+        {
+          "title": "Alert Dialog",
+          "href": "#",
+          "description": "A modal dialog that interrupts the user with important content and expects a response."
+        }
+      ]
+    },
+    {
+      "title": "On Sale",
+      "url": "#"
+    },
+    {
+      "title": "New Arrivals",
+      "url": "#"
+    },
+    {
+      "title": "Brands",
+      "url": "#"
+    }
+  ],
+  "footer": [
+    {
+      "description": "We have clothes that suits your style and which you're proud to wear. From women to men.",
+      "rightsReserved": "Shop.co © 2000-2023, All Rights Reserved",
+      "sections": [
+        {
+          "title": "COMPANY",
+          "items": [
+            {
+              "title": "About",
+              "href": "#"
+            },
+            {
+              "title": "Features",
+              "href": "#"
+            },
+            {
+              "title": "Works",
+              "href": "#"
+            },
+            {
+              "title": "Career",
+              "href": "#"
+            }
+          ]
+        },
+        {
+          "title": "HELP",
+          "items": [
+            {
+              "title": "Customer Support",
+              "href": "#"
+            },
+            {
+              "title": "Customer Support",
+              "href": "#"
+            },
+            {
+              "title": "Terms & Conditions",
+              "href": "#"
+            },
+            {
+              "title": "Privacy Policy",
+              "href": "#"
+            }
+          ]
+        },
+        {
+          "title": "FAQ",
+          "items": [
+            {
+              "title": "Account",
+              "href": "#"
+            },
+            {
+              "title": "Manage Deliveries",
+              "href": "#"
+            },
+            {
+              "title": "Orders",
+              "href": "#"
+            },
+            {
+              "title": "Payments",
+              "href": "#"
+            }
+          ]
+        },
+        {
+          "title": "RESOURCES",
+          "items": [
+            {
+              "title": "Free eBooks",
+              "href": "#"
+            },
+            {
+              "title": "Development Tutorial",
+              "href": "#"
+            },
+            {
+              "title": "How to - Blog",
+              "href": "#"
+            },
+            {
+              "title": "Youtube Playlist",
+              "href": "#"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "search": [
+    {
+      "drawerTitle": "Search",
+      "drawerDescription": "Type keywords to find products or pages.",
+      "drawerPlaceholder": "Search for products...",
+      "drawerButtonClose": "Close",
+      "drawerButton": "Search",
+      "dialogPlaceholder": "Search for products...",
+      "dialogTitle": "Search",
+      "dialogDescription": "Type keywords to find products or pages.",
+      "dialogButtonClose": "Close"
+    }
+  ],
+  "account": [
+    {
+      "title": "Account",
+      "items": [
+        {
+          "title": "My Account",
+          "icon": "User",
+          "href": "#"
+        },
+        {
+          "title": "Settings",
+          "icon": "Settings",
+          "href": "#"
+        },
+        {
+          "title": "Billing",
+          "icon": "CreditCard",
+          "href": "#"
+        },
+        {
+          "title": "Help Center",
+          "icon": "HelpCircle",
+          "href": "#"
+        },
+        {
+          "title": "Sign Out",
+          "icon": "LogOut",
+          "href": "#"
+        }
+      ]
+    }
+  ],
+  "homeHero": [
+    {
+      "title": "FIND CLOTHES THAT MATCHES YOUR STYLE",
+      "description": "Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.",
+      "button": "Shop Now",
+      "stats": [
+        {
+          "value": "200+",
+          "label": "International Brands"
+        },
+        {
+          "value": "2,000+",
+          "label": "High-Quality Products"
+        },
+        {
+          "value": "30,000+",
+          "label": "Happy Customers"
+        }
+      ]
+    }
+  ],
+  "homeProduct": [
+    {
+      "button": "View All"
+    }
+  ],
+  "homeBrowse": [
+    {
+      "title": "BROWSE BY DRESS STYLE",
+      "items": [
+        {
+          "title": "Casual",
+          "href": "/style/casual",
+          "image": "/home/browse/01.png"
+        },
+        {
+          "title": "Party",
+          "href": "/style/party",
+          "image": "/home/browse/03.png"
+        },
+        {
+          "title": "Formal",
+          "href": "/style/formal",
+          "image": "/home/browse/02.png"
+        },
+        {
+          "title": "Gym",
+          "href": "/style/gym",
+          "image": "/home/browse/04.png"
+        }
+      ]
+    }
+  ],
+  "homeHappy": [
+    {
+      "title": "OUR HAPPY CUSTOMERS"
+    }
+  ],
+  "homeNewsletter": [
+    {
+      "title": "STAY UPDATED ABOUT OUR LATEST OFFERS",
+      "placeholder": "Enter your email address",
+      "button": "Subscribe to Newsletter",
+      "buttonLoading": "Subscribing...",
+      "toastInvalidEmail": "Please enter a valid email",
+      "toastSuccess": "Subscribed successfully!"
+    }
+  ]
+}

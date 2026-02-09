@@ -11,13 +11,26 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
-import navigationData from '@/data/navigation.json';
+import lang from '@/lang/en.json';
+
+interface NavigationSubItem {
+  title: string;
+  href: string;
+  description: string;
+}
+
+interface NavigationItem {
+  title: string;
+  url?: string;
+  items?: NavigationSubItem[];
+}
 
 export function AppNavbar() {
+  const navigationData = (lang.navigation || []) as NavigationItem[];
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        {navigationData.navigation.map((item) => (
+        {navigationData.map((item) => (
           <NavigationMenuItem
             key={item.title}
             className={item.items ? 'hidden md:flex' : ''}
@@ -27,21 +40,15 @@ export function AppNavbar() {
                 <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    {item.items.map(
-                      (subitem: {
-                        title: string;
-                        href: string;
-                        description: string;
-                      }) => (
-                        <ListItem
-                          key={subitem.title}
-                          title={subitem.title}
-                          href={subitem.href}
-                        >
-                          {subitem.description}
-                        </ListItem>
-                      ),
-                    )}
+                    {item.items.map((subitem) => (
+                      <ListItem
+                        key={subitem.title}
+                        title={subitem.title}
+                        href={subitem.href}
+                      >
+                        {subitem.description}
+                      </ListItem>
+                    ))}
                   </ul>
                 </NavigationMenuContent>
               </>
@@ -50,7 +57,7 @@ export function AppNavbar() {
                 asChild
                 className={navigationMenuTriggerStyle()}
               >
-                <Link href={item.url}>{item.title}</Link>
+                <Link href={item.url || '#'}>{item.title}</Link>
               </NavigationMenuLink>
             )}
           </NavigationMenuItem>

@@ -23,10 +23,26 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Search as SearchIcon } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
+import lang from '@/lang/en.json';
 
 export default function AppSearch() {
   const isMobile = useIsMobile();
   const [open, setOpen] = React.useState(false);
+
+  const searchData =
+    lang.search && lang.search.length > 0
+      ? lang.search[0]
+      : {
+          drawerTitle: '',
+          drawerDescription: '',
+          drawerPlaceholder: '',
+          drawerButtonClose: '',
+          drawerButton: '',
+          dialogPlaceholder: '',
+          dialogTitle: '',
+          dialogDescription: '',
+          dialogButtonClose: '',
+        };
 
   if (isMobile) {
     return (
@@ -43,23 +59,23 @@ export default function AppSearch() {
 
         <DrawerContent className="max-h-[90vh]">
           <DrawerHeader className="text-left">
-            <DrawerTitle>Search</DrawerTitle>
+            <DrawerTitle>{searchData.drawerTitle}</DrawerTitle>
             <DrawerDescription>
-              Type keywords to find products or pages.
+              {searchData.drawerDescription}
             </DrawerDescription>
           </DrawerHeader>
 
           <div className="px-4 pb-4">
-            <Input placeholder="Search for products..." autoFocus />
+            <Input placeholder={searchData.drawerPlaceholder} autoFocus />
           </div>
 
           <div className="px-4 pb-4 flex gap-2">
             <DrawerClose asChild>
               <Button className="flex-1" variant="outline">
-                Close
+                {searchData.drawerButtonClose}
               </Button>
             </DrawerClose>
-            <Button className="flex-1">Search</Button>
+            <Button className="flex-1">{searchData.drawerButton}</Button>
           </div>
         </DrawerContent>
       </Drawer>
@@ -80,19 +96,17 @@ export default function AppSearch() {
 
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Search</DialogTitle>
-          <DialogDescription>
-            Type keywords to find products or pages.
-          </DialogDescription>
+          <DialogTitle>{searchData.dialogTitle}</DialogTitle>
+          <DialogDescription>{searchData.dialogDescription}</DialogDescription>
         </DialogHeader>
 
         <div className="mt-4">
-          <Input placeholder="Search for products..." autoFocus />
+          <Input placeholder={searchData.dialogPlaceholder} autoFocus />
         </div>
 
         <div className="mt-4 flex justify-end">
           <DialogClose asChild>
-            <Button>Close</Button>
+            <Button>{searchData.dialogButtonClose}</Button>
           </DialogClose>
         </div>
       </DialogContent>

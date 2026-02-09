@@ -1,9 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { AppNavbar } from '@/components/app-navbar';
-import AppSearch from '@/components/app-search';
-import AppUser from '@/components/app-user';
-import { ThemeToggle } from '@/components/theme-toggle';
+import { AppNavbar } from '@/components/layout/AppNavbar';
+import AppSearch from '@/components/layout/AppSearch';
+import AppUser from '@/components/layout/AppUser';
 import { Button } from '@/components/ui/button';
 import { ShoppingCart } from 'lucide-react';
 import { SidebarTrigger } from '@/components/ui/sidebar';
@@ -21,11 +20,11 @@ export default function AppHeader() {
           />
         </div>
 
-        <Link href="/" aria-label="Logo" className="flex-shrink-0">
+        <Link href="/home" aria-label="Logo" className="flex-shrink-0">
           <Image
             className="dark:invert h-6 sm:h-8 w-auto"
             src="/logo.svg"
-            alt="Next.js logo"
+            alt="logo"
             width={159}
             height={24}
             priority
@@ -45,13 +44,13 @@ export default function AppHeader() {
           </div>
 
           {/* Theme toggle */}
-          <div className="hidden md:flex">
+          {/* <div className="hidden md:flex">
             <ThemeToggle />
-          </div>
+          </div> */}
 
           {/* Shopping cart */}
           <Button variant="outline" size="icon" asChild>
-            <Link href="/#" aria-label="Shopping cart">
+            <Link href="#" aria-label="Shopping cart">
               <ShoppingCart className="size-4" />
             </Link>
           </Button>

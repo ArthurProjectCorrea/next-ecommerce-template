@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Bungee } from 'next/font/google';
 import { Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import lang from '@/lang/en.json';
 import {
   InputGroup,
   InputGroupAddon,
@@ -17,28 +18,50 @@ export interface NewsletterProps {
   title?: string;
   placeholder?: string;
   buttonText?: string;
+  buttonLoadingText?: string;
+  toastInvalidEmail?: string;
+  toastSuccess?: string;
   onSubscribe?: (email: string) => void;
 }
 
-export default function Newsletter({
-  title = 'STAY UPDATED ABOUT OUR LATEST OFFERS',
-  placeholder = 'Enter your email address',
-  buttonText = 'Subscribe to Newsletter',
+export default function HomeNewsletter({
+  title,
+  placeholder,
+  buttonText,
+  buttonLoadingText,
+  toastInvalidEmail,
+  toastSuccess,
   onSubscribe,
 }: NewsletterProps) {
+  const newsletterLang = lang.homeNewsletter?.[0];
+  const sectionTitle =
+    newsletterLang?.title || title || 'STAY UPDATED ABOUT OUR LATEST OFFERS';
+  const inputPlaceholder =
+    newsletterLang?.placeholder || placeholder || 'Enter your email address';
+  const buttonLabel =
+    newsletterLang?.button || buttonText || 'Subscribe to Newsletter';
+  const buttonLoadingLabel =
+    newsletterLang?.buttonLoading || buttonLoadingText || 'Subscribing...';
+  const invalidEmailMessage =
+    newsletterLang?.toastInvalidEmail ||
+    toastInvalidEmail ||
+    'Please enter a valid email';
+  const successMessage =
+    newsletterLang?.toastSuccess || toastSuccess || 'Subscribed successfully!';
+
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubscribe = async () => {
     if (!email || !email.includes('@')) {
-      toast.error('Please enter a valid email');
+      toast.error(invalidEmailMessage);
       return;
     }
 
     setIsLoading(true);
     try {
       onSubscribe?.(email);
-      toast.success('Subscribed successfully!');
+      toast.success(successMessage);
       setEmail('');
     } finally {
       setIsLoading(false);
@@ -46,14 +69,14 @@ export default function Newsletter({
   };
 
   return (
-    <section className="rounded-2xl bg-foreground dark:bg-foreground p-8 lg:p-12">
+    <section className="relative z-10 rounded-2xl bg-foreground dark:bg-foreground p-8 lg:p-12">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
         {/* Title */}
         <div className="md:w-3/4">
           <h2
             className={`${bungee.className} text-5xl md:text-4xl font-bold tracking-tight text-background dark:text-background max-w-md`}
           >
-            {title}
+            {sectionTitle}
           </h2>
         </div>
 
@@ -65,7 +88,7 @@ export default function Newsletter({
             </InputGroupAddon>
             <InputGroupInput
               type="email"
-              placeholder={placeholder}
+              placeholder={inputPlaceholder}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               onKeyDown={(e) => {
@@ -82,7 +105,7 @@ export default function Newsletter({
             disabled={isLoading || !email}
             className="bg-background dark:bg-background text-foreground dark:text-foreground hover:bg-background/90 dark:hover:bg-background/90 rounded-full px-6 sm:px-8 whitespace-nowrap "
           >
-            {isLoading ? 'Subscribing...' : buttonText}
+            {isLoading ? buttonLoadingLabel : buttonLabel}
           </Button>
         </div>
       </div>

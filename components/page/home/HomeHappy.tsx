@@ -1,8 +1,9 @@
 'use client';
 
-import React from 'react';
 import { Bungee } from 'next/font/google';
 import { Star, BadgeCheck, BadgeX } from 'lucide-react';
+import lang from '@/lang/en.json';
+import commitData from '@/database/commit.json';
 import {
   Carousel,
   CarouselContent,
@@ -24,14 +25,18 @@ export interface CustomerReview {
 
 export interface HappyCustomersProps {
   title?: string;
-  reviews: CustomerReview[];
+  reviews?: CustomerReview[];
 }
 
-export default function HappyCustomers({
-  title = 'OUR HAPPY CUSTOMERS',
-  reviews,
+export default function HomeHappy({
+  title,
+  reviews: reviewsProp,
 }: HappyCustomersProps) {
+  const reviews = reviewsProp ?? commitData.commits;
+
   if (!reviews || reviews.length === 0) return null;
+  const sectionTitle =
+    lang.homeHappy?.[0]?.title || title || 'OUR HAPPY CUSTOMERS';
 
   const renderStars = (rating: number, maxRating: number = 5) => {
     return Array.from({ length: maxRating }).map((_, i) => (
@@ -60,7 +65,7 @@ export default function HappyCustomers({
           <h2
             className={`${bungee.className} text-5xl md:text-4xl font-bold tracking-tight text-foreground`}
           >
-            {title}
+            {sectionTitle}
           </h2>
           <div className="flex gap-2 ml-auto">
             <CarouselPrevious className="static translate-y-0 h-8 w-8" />

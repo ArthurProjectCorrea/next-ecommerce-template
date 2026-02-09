@@ -1,27 +1,31 @@
 'use client';
 
-import React from 'react';
 import { Bungee } from 'next/font/google';
 import Link from 'next/link';
+import lang from '@/lang/en.json';
 
 const bungee = Bungee({ subsets: ['latin'], weight: '400' });
 
 export interface StyleItem {
-  id: string;
+  id?: string;
   title: string;
   href?: string;
   image: string;
 }
 
-export interface BrowseByStyleProps {
+export interface BrowseByStyleData {
   title?: string;
   items: StyleItem[]; // expects 4 items (desktop layout assumes 4)
 }
 
-export default function BrowseByStyle({
-  title = 'BROWSE BY DRESS STYLE',
-  items,
-}: BrowseByStyleProps) {
+export default function HomeBrowse() {
+  const homeBrowse = (lang.homeBrowse?.[0] ?? {
+    title: '',
+    items: [],
+  }) as BrowseByStyleData;
+
+  const { title, items } = homeBrowse;
+
   if (!items || items.length === 0) return null;
 
   const getDesktopClasses = (index: number) => {
@@ -58,7 +62,7 @@ export default function BrowseByStyle({
       <div className="hidden lg:grid grid-cols-3 gap-4 mt-6 auto-rows-[280px]">
         {items.slice(0, 4).map((item, i) => (
           <Link
-            key={item.id}
+            key={item.id || item.href || item.title || i}
             href={item.href || '#'}
             className={`relative overflow-hidden rounded-xl bg-card dark:bg-secondary shadow-sm p-6 bg-cover bg-right ${getDesktopClasses(i)}`}
             style={{
@@ -76,7 +80,7 @@ export default function BrowseByStyle({
       <div className="lg:hidden flex flex-col gap-4 mt-6">
         {items.map((item) => (
           <Link
-            key={item.id}
+            key={item.id || item.href || item.title || item.image}
             href={item.href || '#'}
             className="relative overflow-hidden rounded-xl bg-cover bg-center shadow-sm flex items-start p-4 h-64"
             style={{

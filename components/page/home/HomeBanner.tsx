@@ -1,15 +1,14 @@
 'use client';
 
-import React from 'react';
 import Image from 'next/image';
 
 export default function HomeBanner() {
-  const logos = [
-    { id: 1, name: 'Calvin Klein', src: '/home/banner/calvin-klein.svg' },
-    { id: 2, name: 'Gucci', src: '/home/banner/gucci.svg' },
-    { id: 3, name: 'Prada', src: '/home/banner/prada.svg' },
-    { id: 4, name: 'Versage', src: '/home/banner/versage.svg' },
-    { id: 5, name: 'Zara', src: '/home/banner/zara.svg' },
+  const brands = [
+    { label: 'Calvin Klein', image: '/home/banner/calvin-klein.svg' },
+    { label: 'Gucci', image: '/home/banner/gucci.svg' },
+    { label: 'Prada', image: '/home/banner/prada.svg' },
+    { label: 'Versage', image: '/home/banner/versage.svg' },
+    { label: 'Zara', image: '/home/banner/zara.svg' },
   ];
 
   return (
@@ -31,14 +30,14 @@ export default function HomeBanner() {
 
       <div className="flex h-32 items-center py-4 ">
         <div className="scroll-container flex gap-16 whitespace-nowrap mr-16">
-          {logos.map((logo) => (
+          {brands.map((brand) => (
             <div
-              key={logo.id}
+              key={brand.label}
               className="flex flex-shrink-0 items-center justify-center min-w-max"
             >
               <Image
-                src={logo.src}
-                alt={logo.name}
+                src={brand.image}
+                alt={brand.label}
                 width={40}
                 height={40}
                 className="h-10 w-auto object-contain dark:invert"
@@ -49,14 +48,14 @@ export default function HomeBanner() {
 
         {/* Duplicar os logos para criar o efeito infinito contínuo */}
         <div className="scroll-container flex gap-16 whitespace-nowrap">
-          {logos.map((logo) => (
+          {brands.map((brand) => (
             <div
-              key={`${logo.id}-duplicate`}
+              key={`${brand.label}-duplicate`}
               className="flex flex-shrink-0 items-center justify-center min-w-max"
             >
               <Image
-                src={logo.src}
-                alt={logo.name}
+                src={brand.image}
+                alt={brand.label}
                 width={40}
                 height={40}
                 className="h-10 w-auto object-contain dark:invert"
